@@ -34,6 +34,9 @@ public class Main {
         int center = (lower + upper) / 2;
         int totalDducksLen = Arrays.stream(dducks).map((d) -> d - center < 0 ? 0 : d - center).reduce(0, Integer::sum);
         if (lower == upper) {
+            if (totalDducksLen < m) {
+                return binarySerach(lower, upper, m, dducks);
+            }
             return totalDducksLen;
         }
 
