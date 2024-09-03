@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.HashMap;
@@ -8,28 +9,28 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int answer = solution(sc.nextInt());
+        BigInteger answer = solution(sc.nextInt());
         System.out.println(answer);
 
         sc.close();
     }
 
-    static int solution(int n) {
-        Map<Integer, Integer> dpTable = new HashMap<>();
-        dpTable.put(1, 1);
-        dpTable.put(2, 3);
-        return dp(n, dpTable) % 796797;
+    static BigInteger solution(int n) {
+        Map<Integer, BigInteger> dpTable = new HashMap<>();
+        dpTable.put(1, BigInteger.valueOf(1L));
+        dpTable.put(2, BigInteger.valueOf(3L));
+        return dp(n, dpTable).mod(BigInteger.valueOf(10007L));
     }
 
-    static int dp(int n, Map<Integer, Integer> dpTable) {
+    static BigInteger dp(int n, Map<Integer, BigInteger> dpTable) {
         if (dpTable.containsKey(n)) {
             return dpTable.get(n);
         }
 
-        int from2 = dp(n - 2, dpTable);
-        int from1 = dp(n - 1, dpTable);
+        BigInteger from2 = dp(n - 2, dpTable);
+        BigInteger from1 = dp(n - 1, dpTable);
 
-        int count = from1 + from2 * 2;
+        BigInteger count = from1.add(from2.multiply(BigInteger.valueOf(2L)));
         dpTable.put(n, count);
         return count;
     }
