@@ -84,7 +84,9 @@ public class AntWorrier {
         if ( n >= 2) {
             returnValue = Math.max(execute(n - 1), execute(n - 2) + room.get(n));
         }
+
         memories.put(n,returnValue);
+
         return returnValue;
 
     }
