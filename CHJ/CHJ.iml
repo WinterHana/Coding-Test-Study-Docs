@@ -18,6 +18,7 @@
       <sourceFolder url="file://$MODULE_DIR$/24_09_01_ch8_DP" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/24_09_02_ch8_DP" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/24_09_03_ch8_DP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/24_09_04_mergeSort" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
