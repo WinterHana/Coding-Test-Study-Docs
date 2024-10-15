@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(YourProjectName)
+
+add_subdirectory(cotePracCHJ2024)
+
+add_executable(cotePracCHJ2024_ProblemSolving_homework1 cotePracCHJ2024/ProblemSolving/homework1.cpp)
+add_executable(cotePracCHJ2024_ProblemSolving_homework2 cotePracCHJ2024/ProblemSolving/homework2.cpp)
+add_executable(cotePracCHJ2024_ProblemSolving_homework3 cotePracCHJ2024/ProblemSolving/homework3.cpp)
+add_executable(cotePracCHJ2024_ProblemSolving_homework4 cotePracCHJ2024/ProblemSolving/homework4.cpp)
+add_executable(cotePracCHJ2024_ProblemSolving_homework5 cotePracCHJ2024/ProblemSolving/homework5.cpp)
